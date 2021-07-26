@@ -1,0 +1,578 @@
+body {
+    background: url(images/bgpixel.png);
+}
+#lang:hover {
+	background: #FFFFFF;
+	cursor: pointer;
+}
+.indiv {
+	margin-bottom: 7px;
+	display: inline-block;
+	background: #b5bdc8;
+    background: linear-gradient(to bottom, #b5bdc8 0%, #828c95 36%, #A9A9A9 100%);
+    font-size: 18px; /* Размер шрифта */
+    padding: 20px 30px; /* Поля вокруг текста */ 
+    color: #000; /* Цвет текста */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius: 6px; /* Радиус скругления */
+}
+.indiv img {
+	float: left;
+	width: 49%;
+	height: 49%;
+	margin: 2px;
+}
+.imagesindrawings {
+	float: center;
+	width: 65%;
+	height: 65%;
+	margin: 3px;
+}
+.indiv button {
+	margin-top: 11px;
+	padding: 13px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid black;
+	background: linear-gradient(to top, #808080, #696969);
+	color: #FFF;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.indiv button:hover {
+	background: linear-gradient(to top, #696969, #808080);
+	box-shadow: 0 0 10px 7px #778899;
+	-moz-transition: all 0.1s 0.01s ease; /*делаем плавный переход*/
+    -o-transition: all 0.1s 0.01s ease;
+    -webkit-transition: all 0.1s 0.01s ease
+}
+#logopage {
+	margin-left: 173px;
+	margin-right: 180px;
+}
+.header {
+	border: 1px solid black;
+	border-radius: 5px;
+	background: linear-gradient(to top, #808080, #FFFFE0, #808080);
+	padding: 10px;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+#lang img {
+	width: 5%;
+	height: 5%;
+}
+#logo {
+	text-align: center;
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.menulogo {
+	float: left;
+    background: #fefcea;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+}
+#mainonindex {
+	clear: top;
+	margin-top: 60px;
+	margin-left: 190px;
+	margin-right: 190px;
+}
+#hypertext {
+	float: right;
+	margin-right: 5%
+}
+.newlogo {
+	float: right;
+    background: #fefcea;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+}
+.mobileMenu {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	#mainonindex {width: 62%;}
+	.prokrutka {display: none;}
+	.newlogo {display: none;}
+	#logopage {width: 69%;}
+}
+@media (orientation:portrait) {
+	body {overflow-x: hidden;}
+	.mobileMenu {display: block;}
+    .mobileMenu ul {
+		margin-left: 6%;
+        list-style: none; /*убираем маркеры списка*/
+        padding: 15px; /*убираем отступы*/
+        margin-top: 25px; /*делаем отступ сверху*/
+        background-image: linear-gradient(to top, 
+	        rgba(105, 105, 105,0), 
+	        rgba(105, 105, 105,0.8), 
+	        rgba(105, 105, 105,1),
+            rgba(105, 105, 105,1), 
+	        rgba(119,136,153,1), 
+	        rgba(105, 105, 105,1), 
+	        rgba(105, 105, 105,1),
+            rgba(105, 105, 105,0.8),
+	        rgba(105, 105, 105,0)); /*добавляем фон всему меню*/
+        height: 50px; /*задаем высоту*/
+    }
+    .mobileMenu a {
+		font-size: 250%;
+	    text-align: center;
+        text-decoration: none; /*убираем подчеркивание текста ссылок*/
+        color:#fff; /*меняем цвет ссылок*/
+        padding:0px 15px; /*добавляем отступ*/
+        font-family: arial; /*меняем шрифт*/
+        line-height:50px; /*ровняем меню по вертикали*/
+        display: block; 
+        border-right: 1px solid #677B27; /*добавляем бордюр справа*/
+        -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+        -o-transition: all 0.3s 0.01s ease;
+        -webkit-transition: all 0.3s 0.01s ease;
+    }
+    .mobileMenu a:hover {
+        background:#D43737;/*добавляем эффект при наведении*/
+    }
+    .mobileMenu li {
+		text-align: center;
+		font-size: 237%;
+		color: #FFF;
+        float: center; /*Размещаем список горизонтально для реализации меню*/
+        position: relative; /*задаем позицию для позиционирования*/
+    }
+     
+    /*Стили для скрытого выпадающего меню*/
+	/*Когда меню скрыто*/
+    .mobileMenu li > ul {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		margin: auto;
+        position: absolute;
+        top: 25px;
+        display: none;   
+    }
+    .mobileMenu ul li ul li {
+		float: center;
+		font-family: 'Times New Roman';
+		text-align: center;
+		color: grey;
+		padding: 50px;
+		margin: auto;
+		margin-top: 40px;
+	}
+    /*Делаем скрытую часть видимой*/
+    .mobileMenu li:hover > ul {
+        display: table; 
+        width: 97%;     
+    }
+    .mobileMenu li:hover > ul > li {
+        float: center;
+        text-align: center;
+    }
+	#logo {image-rendering: crisp-edges;}
+	#logopage {font-size: 50px; display: inline-block;}
+	#logopage img {width: 10%; height: 10%;}
+	#mainonindex {width: 102%; margin: 0; font-size: 52px;}
+	#futter {font-size: 50px; margin-left: 6%;}
+	#futter button {font-size: 47px; margin: 5px;}
+	.prokrutka {display: none;}
+	.newlogo {display: none;}
+	#logopage {width: 69%;}
+	.menulogo {display: none;}
+	#menu {display: none;}
+	#menu li {display: none;}
+	.langbutton {font-size: 55px;}
+    .indiv button {font-size: 40px;}
+}
+footer {
+	clear: both;
+    background: #8e8e8e;
+	padding: 5px;
+	outline: 2px solid #595652;
+    margin: 0 auto;
+	text-align: center;
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+footer p {
+	font-size: 95%;
+	text-align: center;
+}
+footer button {
+	font-size: 70%;
+	background: #b5bdc8;
+    background: linear-gradient(to bottom, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+    font-size: 16px; /* Размер шрифта */
+    padding: 10px 20px; /* Поля вокруг текста */ 
+    color: #0000FF; /* Цвет текста */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius: 5px; /* Радиус скругления */
+	cursor: pointer;
+}
+.prokrutka {
+	margin-left: 1px;
+	margin-bottom: 7px;
+	clear: right;
+	float: right;
+	border-radius: 15px;
+	color: #D2691E;
+	text-align: center;
+    height:450px; /* высота нашего блока */
+	width: 160px;
+    background: linear-gradient(to right, #696969  0%, #000000 46%, #696969 100%);
+    border: 2px solid #A9A9A9; /* размер и цвет границы блока */
+    overflow-y: scroll; /* прокрутка по вертикали */
+}
+.gradientcommon {
+	margin-left: 130px;
+	margin-right: 130px;
+	text-align: center;
+    background: #b5bdc8;
+    background: linear-gradient(to bottom, #b5bdc8 0%, #828c95 36%, #C0C0C0 100%);
+    font-size: 18px; /* Размер шрифта */
+    padding: 10px 20px; /* Поля вокруг текста */ 
+    color: #000; /* Цвет текста */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius: 10px; /* Радиус скругления */
+}
+.gradient {
+    background: #fefcea;
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+}
+.frame {
+    padding: 2%; /* Ширина паспарту */
+    background: #808080; /* Цвет фона  паспарту */
+    border: 2px solid #666; /* Параметры рамки */ 
+}
+.table {
+	font-size: 180%;
+}
+.gradientgray {
+ background-image: linear-gradient(to top, 
+	  rgba(105, 105, 105,0), 
+	  rgba(105, 105, 105,0.8), 
+	  rgba(105, 105, 105,1),
+      rgba(105, 105, 105,1), 
+	  rgba(119,136,153,1), 
+	  rgba(105, 105, 105,1), 
+	  rgba(105, 105, 105,1),
+      rgba(105, 105, 105,0.8),
+	 rgba(105, 105, 105,0)
+	); 
+	padding: 10px;
+}	
+.gradientred {
+    background-image: linear-gradient(to top, 
+	rgba(128,0,0,0), 
+	rgba(128,0,0,0.8), 
+	rgba(128,0,0,1),
+    rgba(128,0,0,1), 
+	rgba(165,42,42,1), 
+	rgba(128,0,0,1), 
+	rgba(128,0,0,1),
+    rgba(128,0,0,0.8),
+	rgba(128,0,0,0)
+	);
+}
+.gradientredh {
+    background-image: linear-gradient(to top, 
+	rgba(128,0,0,0), 
+	rgba(128,0,0,0.8), 
+	rgba(128,0,0,1),
+    rgba(128,0,0,1), 
+	rgba(165,42,42,1), 
+	rgba(128,0,0,1), 
+	rgba(128,0,0,1),
+    rgba(128,0,0,0.8),
+	rgba(128,0,0,0)
+	);
+    color: #808080; 
+	padding: 10px;
+	text-align: center;
+}
+.gradientred:hover {
+	 background-image: linear-gradient(to top, 
+	rgba(165,42,42,0), 
+	rgba(165,42,42,0.8), 
+	rgba(165,42,42,1),
+    rgba(165,42,42,1), 
+	rgba(128,0,0,1), 
+	rgba(165,42,42,1), 
+	rgba(165,42,42,1),
+    rgba(165,42,42.8),
+	rgba(165,42,42,0)
+	);
+}
+.gradientgreen {
+    background-image: linear-gradient(to top, 
+	rgba(124,252,0,0), 
+	rgba(124,252,0,0.8), 
+	rgba(124,252,0,1),
+    rgba(124,252,0,1), 
+	rgba(0,250,154,1), 
+	rgba(124,252,0,1), 
+	rgba(124,252,0,1),
+    rgba(124,252,0,0.8),
+	rgba(124,252,0,0)
+	);
+    color: #808080; 
+	padding: 10px;
+}
+.gradientgreenh {
+    background-image: linear-gradient(to top, 
+	rgba(124,252,0,0), 
+	rgba(124,252,0,0.8), 
+	rgba(124,252,0,1),
+    rgba(124,252,0,1), 
+	rgba(0,250,154,1), 
+	rgba(124,252,0,1), 
+	rgba(124,252,0,1),
+    rgba(124,252,0,0.8),
+	rgba(124,252,0,0)
+	);
+    color: #fff;
+	padding: 10px;
+	text-align: center;
+	font-size: 200%;
+}
+.gradientgreen:hover {
+    background-image: linear-gradient(to top, 
+	rgba(0,250,154,0), 
+	rgba(0,250,154,0.8), 
+	rgba(0,250,154,1),
+    rgba(0,250,154,1), 
+	rgba(124,252,0,1), 
+	rgba(0,250,154,1), 
+	rgba(0,250,154,1),
+    rgba(0,250,154,0.8),
+	rgba(0,250,154,0)
+	);
+}
+.gradientblue {
+    background-image: linear-gradient(to top, 
+	rgba(30,144,255,0), 
+	rgba(30,144,255,0.8), 
+	rgba(30,144,255,1),
+    rgba(30,144,255,1), 
+	rgba(0,191,255,1), 
+	rgba(30,144,255,1), 
+	rgba(30,144,255,1),
+    rgba(30,144,255,0.8),
+	rgba(30,144,255,0)
+	);
+    color: #808080; 
+	padding: 10px;
+}
+.gradientblueh {
+    background-image: linear-gradient(to top, 
+	rgba(30,144,255,0), 
+	rgba(30,144,255,0.8), 
+	rgba(30,144,255,1),
+    rgba(30,144,255,1), 
+	rgba(0,191,255,1), 
+	rgba(30,144,255,1), 
+	rgba(30,144,255,1),
+    rgba(30,144,255,0.8),
+	rgba(30,144,255,0)
+	);
+    color: #808080; 
+	padding: 10px;
+    text-align: center;
+}
+.gradientblue:hover {
+    background-image: linear-gradient(to top, 
+	rgba(0,191,255,0), 
+	rgba(0,191,255,0.8), 
+	rgba(0,191,255,1),
+    rgba(0,191,255,1), 
+	rgba(30,144,255,1), 
+	rgba(0,191,255,1), 
+	rgba(0,191,255,1),
+    rgba(0,191,255,0.8),
+	rgba(0,191,255,0)
+	);
+}
+.gradientyellow {
+    background-image: linear-gradient(to top, 
+	rgba(255,215,0,0), 
+	rgba(255,215,0,0.8), 
+	rgba(255,215,0,1),
+    rgba(255,215,0,1), 
+	rgba(255,255,0,1), 
+	rgba(255,215,0,1), 
+	rgba(255,215,0,1),
+    rgba(255,215,0,0.8),
+	rgba(255,215,0,0)
+	);
+    color: #808080; 
+	padding: 10px;
+}
+.gradientyellowh {
+    background-image: linear-gradient(to top, 
+	rgba(255,215,0,0), 
+	rgba(255,215,0,0.8), 
+	rgba(255,215,0,1),
+    rgba(255,215,0,1), 
+	rgba(255,255,0,1), 
+	rgba(255,215,0,1), 
+	rgba(255,215,0,1),
+    rgba(255,215,0,0.8),
+	rgba(255,215,0,0)
+	);
+    color: #808080; 
+	padding: 10px;
+    text-align: center;
+}
+.gradientyellow:hover {
+    background-image: linear-gradient(to top, 
+	rgba(255,255,0,0), 
+	rgba(255,255,0,0.8), 
+	rgba(255,255,0,1),
+    rgba(255,255,0,1), 
+	rgba(255,215,0,1), 
+	rgba(255,255,0,1), 
+	rgba(255,255,0,1),
+    rgba(255,255,0,0.8),
+	rgba(255,255,0,0)
+	);
+}
+.gradientwhite {
+    background-image: linear-gradient(to top, 
+	rgba(255, 255, 255,0), 
+	rgba(255, 255, 255,0.8), 
+	rgba(255, 255, 255,1),
+    rgba(255, 255, 255,1), 
+	rgba(192, 192, 192,1), 
+	rgba(255, 255, 255,1), 
+	rgba(255, 255, 255,1),
+    rgba(255, 255, 255,0.8),
+	rgba(255, 255, 255,0)
+	);
+	color: #808080; 
+	padding: 10px;
+}
+.gradientwhiteh {
+    background-image: linear-gradient(to top, 
+	rgba(255, 255, 255,0), 
+	rgba(255, 255, 255,0.8), 
+	rgba(255, 255, 255,1),
+    rgba(255, 255, 255,1), 
+	rgba(192, 192, 192,1), 
+	rgba(255, 255, 255,1), 
+	rgba(255, 255, 255,1),
+    rgba(255, 255, 255,0.8),
+	rgba(255, 255, 255,0)
+	);
+	color: #808080; 
+	padding: 10px;
+    text-align: center;
+}
+.gradientwhite:hover {
+    background-image: linear-gradient(to top, 
+	rgba(192, 192, 192,0), 
+	rgba(192, 192, 192,0.8), 
+	rgba(192, 192, 192,1),
+    rgba(192, 192, 192,1), 
+	rgba(255, 255, 255,1), 
+	rgba(192, 192, 192,1), 
+	rgba(192, 192, 192,1),
+    rgba(192, 192, 192,0.8),
+	rgba(192, 192, 192,0)
+	);
+}
+.ulleft {
+    clear: left;	
+    float: left;
+	text-align: center;
+	padding-top: 10px;
+    list-style: none; /*убираем маркеры списка*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top: 25px; /*делаем отступ сверху*/
+    background-image: linear-gradient(to top, 
+	  rgba(105, 105, 105,0), 
+	  rgba(105, 105, 105,0.8), 
+	  rgba(105, 105, 105,1),
+      rgba(105, 105, 105,1), 
+	  rgba(119,136,153,1), 
+	  rgba(105, 105, 105,1), 
+	  rgba(105, 105, 105,1),
+      rgba(105, 105, 105,0.8),
+	 rgba(105, 105, 105,0)
+	); 
+	display: table;
+    margin: auto;
+    padding: 10px; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+    height: 47.5px; /*задаем высоту*/
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ulleft a {
+	text-align: center;
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	valign: bottom;
+    padding: 0px; /*добавляем отступ*/
+    color: #696969;
+    font-size: 100%;
+    line-height: 25px; /*ровняем меню по вертикали*/
+}
+.ulleft li {
+	margin: 3px;
+    text-align: center;
+    padding: 9px 15px;
+}
+#logosDeBlocks {
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#logopage {
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#lang {
+	display: inline;
+	padding: 3px;
+	background: #8e8e8e;
+	outline: 2px solid #595652; 
+	/* делаем текст некопируемым */
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
