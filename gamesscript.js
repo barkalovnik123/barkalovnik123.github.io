@@ -80,7 +80,7 @@ function mainblock() {
 					<br>
 					Как долго вы сможете продержаться?
 					<br>
-					<a href="games/dino games.html">
+					<a href="games/dino game.html">
 					<button>
 					    Играть онлайн
 					</button>
