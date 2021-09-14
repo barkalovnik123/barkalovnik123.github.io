@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Записная книга | личный дневник</title>
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="stylebook.css" type="text/css">
+	</head>
+	<body>
+		<form>
+			<input type='text' placeholder='День' class="text_input" id="day_id">
+			<input type='text' placeholder='Месяц' class="text_input" id="month_id">
+			<input type='text' placeholder='Год' class="text_input" id="year_id">
+			<input type="button" class="loadButton" onclick="loadFromLocal()" value="Загрузить">
+			<select id="selection" onclick="autoLoad()">
+				<option>Доступные записи</option>
+			</select>
+		</form>
+		<div class="flex_box" style="">
+			<p>
+				<textarea id="text_pole"></textarea>
+			</p>
+			<p>
+				<button class="showButton" onclick="saveToLocal()">Сохранить</button>
+			</p>
+		</div>
+		<script src="scriptbook.js">
+		</script>
+	</body>
+</html>

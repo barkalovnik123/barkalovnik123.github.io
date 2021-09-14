@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Калькулятор оценок</title>
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="stylecalc.css" type="text/css">
+	</head>
+	<body>
+		<div class="flex_box">
+			<div>
+				<form>
+					<!---->
+					<big>Оценивание ведется</big>
+					<p>
+					<input type="radio" name="time" id="year" onclick="change()" class="radioB" checked>за год
+					<input type="radio" name="time" id="half_year" onclick="change()" class="radioB">за полугодие
+					</p>
+				</form>
+				<form>
+					<!---->
+					<big>Класс</big>
+					<p>
+					<input type="radio" name="grade" id="grade_small" class="radioB">1
+					<input type="radio" name="grade" id="grade_high" class="radioB" checked>2-12
+					</p>
+				</form>
+			</div>
+			<p><button onclick="showOrHideFG()" class="showButton">Ввести ФО</button></p>
+			<form id="FGForm">
+				<p><input type='text' placeholder='количество оценок "1"' class="text_input" id="i1"></p>
+				<p><input type='text' placeholder='количество оценок "2"' class="text_input" id="i2"></p>
+				<p><input type='text' placeholder='количество оценок "3"' class="text_input" id="i3"></p>
+				<p><input type='text' placeholder='количество оценок "4"' class="text_input" id="i4"></p>
+				<p><input type='text' placeholder='количество оценок "5"' class="text_input" id="i5"></p>
+				<p><input type='text' placeholder='количество оценок "6"' class="text_input" id="i6"></p>
+				<p><input type='text' placeholder='количество оценок "7"' class="text_input" id="i7"></p>
+				<p><input type='text' placeholder='количество оценок "8"' class="text_input" id="i8"></p>
+				<p><input type='text' placeholder='количество оценок "9"' class="text_input" id="i9"></p>
+				<p><input type='text' placeholder='количество оценок "10"' class="text_input" id="i10"></p>
+			</form>
+			<p><button onclick="showOrHideSAS()" class="showButton">Ввести оценки СОР</button></p>
+			<form id="SASForm">
+				<p><input type='text' placeholder='Ваша оценка СОР1' class="text_input" id="sas1"></p>
+				<p><input type='text' placeholder='Максимальная оценка СОР1' class="text_input" id="maxsas1"></p>
+				
+				<p><input type='text' placeholder='Ваша оценка СОР2' class="text_input" id="sas2"></p>
+				<p><input type='text' placeholder='Максимальная оценка СОР2' class="text_input" id="maxsas2"></p>
+				<div id="be_hidden">
+				<p><input type='text' placeholder='Ваша оценка СОР3' class="text_input" id="sas3"></p>
+				<p><input type='text' placeholder='Максимальная оценка СОР3' class="text_input" id="maxsas3"></p>
+				
+				<p><input type='text' placeholder='Ваша оценка СОР4' class="text_input" id="sas4"></p>
+				<p><input type='text' placeholder='Максимальная оценка СОР4' class="text_input" id="maxsas4"></p>
+				</div>
+			</form>
+			<div id="be_hidden2">
+			<p><button onclick="showOrHideSAQ()" class="showButton">Ввести оценки СОЧ</button></p>
+			<form id="SAQForm">
+				<p><input type='text' placeholder='Ваша оценка СОЧ' class="text_input" id="saq"></p>
+				<p><input type='text' placeholder='Максимальная оценка СОЧ' class="text_input" id="maxsaq"></p>
+			</form>
+			</div>
+			
+			<button onclick="calculate()" class="showButton">Вычислить</button>
+			
+			<div><p><big id="results"></big></p></div>
+		</div>
+		<script src="scriptcalc.js">
+		</script>
+	</body>
+</html>
